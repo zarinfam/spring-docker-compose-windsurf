@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:16.1'
+    environment:
+      - 'POSTGRES_DB=employee_db'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: 'redis:7.2.3'
+    ports:
+      - '6379:6379'
